@@ -1,0 +1,16 @@
+{
+  "name": "attendance-maintenance-app",
+  "version": "1.0.0",
+  "description": "Personal Attendance Maintenance and GPA Calculation App (MERN)",
+  "private": true,
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently -n BACKEND,FRONTEND -c blue,green \"npm:backend\" \"npm:frontend\"",
+    "seed": "cd backend && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
